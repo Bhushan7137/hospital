@@ -1,0 +1,81 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<style>
+   .container-fluid {
+       width: 100%;
+       max-width: 1200px; 
+       margin: 0 auto; 
+       padding: 20px; 
+       box-sizing: border-box; 
+       background-color: #fff; 
+       border: 1px solid #ccc;
+       border-radius: 8px; 
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   .row {
+       display: flex;
+       align-items: center;
+       margin-bottom: 10px;
+       margin-left: 10px;
+   }
+   .row .col-lg-4, .row .col-lg-8 {
+       padding-left: 5px;
+       padding-right: 5px;
+   }
+   .row label {
+       margin-bottom: 0;
+   }
+</style>
+
+   
+      
+    <div class="container-fluid">
+        <form method="post" enctype="multipart/form-data" id="record_form">
+            <div>
+                    <img alt="OPD Bill Receipt" src="<?=base_url('assets')?>/images/gnadhi_header.png" style="margin:6px; max-width:100%!important;">
+            </div>
+            <div class="row">
+                    <div class="col-lg-12" style="padding-bottom: 5px;">
+                        <label class="control-label" style="margin-left: 500px;text-align:center;"><b>OPERATIVE NOTES</b></h4>
+                    </div>
+           </div><hr>
+          <div class="row" style="margin-top:30px;">
+            <label class="form-control col-lg-4" style="border:0px;"><b>Procedure Performed :-</b></label>
+            <label class="form-control col-lg-8" style="border:0px;">_________________________________________________________________________________________________________________</b></label>
+          </div>
+          <div class="row" style="margin-top:30px;">
+            <label class="form-control col-lg-4" style="border:0px;"><b>Name :-</b></label>
+            <label class="form-control col-lg-4" style="border:0px;"><b>___________________________________________________________________________________</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>age :-</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>_________________</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>sex :-</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>_________________</b></label>
+          </div>
+          <div class="row" style="margin-top:30px;">
+            <label class="form-control col-lg-4" style="border:0px;"><b>Diagnosis:-</b></label>
+            <label class="form-control col-lg-4" style="border:0px;"><b>____________________________________________________________________________________________________________________________</b></label>
+          </div>
+          <div class="row" style="margin-top:30px;">
+            <label class="form-control col-lg-2" style="border:0px;"><b>Start Time:-</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>___________________________________</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>Finish Time:-</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>____________________________________</b></label>
+          </div>
+          <div class="row" style="margin-top:30px;">
+            <label class="form-control col-lg-2" style="border:0px;"><b>Surgeon: 1)_____________________________</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>2)___________________________________</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>3)_____________________________________</b></label>
+          </div>
+          <div class="row" style="margin-top:30px;">
+            <label class="form-control col-lg-2" style="border:0px;"><b>Assistants: 1)________________________</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>2)______________________________</b></label>
+           <label class="form-control col-lg-2" style="border:0px;"><b>3)_______________________________</b></label>
+           <label class="form-control col-lg-2" style="border:0px;"><b>4)_______________________________</b></label>
+          </div>
+          <div class="row" style="margin-top:30px;">
+            <label class="form-control col-lg-2" style="border:0px;"><b>Anaesthetists: 1)______________________________________</b></label>
+            <label class="form-control col-lg-2" style="border:0px;"><b>2)_______________________________________</b></label>
+           
+          </div>
+        </form>
+    </div>
