@@ -1,0 +1,346 @@
+ <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<style>
+   .container-fluid {
+       width: 100%;
+       max-width: 1000px; 
+       margin: 0 auto; 
+       padding: 20px; 
+       box-sizing: border-box; 
+       background-color: #fff; 
+       border: 1px solid #ccc;
+       border-radius: 8px; 
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   table {
+            width: 100%;
+            margin-top: 10px;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            height: 30px;
+        }
+</style>
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data" id="record_form">
+        <div>
+               <img alt="OPD Bill Receipt" src="gnadhi_header.png" class="img-fluid mb-3">
+        </div>
+        <hr>
+        <div class="row">
+            <div  style="padding-bottom: 5px;padding-top: 5px;">
+                <label class="control-label" style="text-align:center; margin-left: 370px;"><b>CASE SHEET AUDIT</b></label>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 5px; margin-right: 5px;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="8">Hospital Number</td>
+                        <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">Admission Date</td>
+                        <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">Date Of Audit</td>
+                        <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8"></td>
+                        <td colspan="1"><label class="control-label">Yes</label></td>
+                        <td colspan="1"><label class="control-label">No</label></td>
+                        <td colspan="1"><label class="control-label">NA</label></td>
+                        <td colspan="1"><label class="control-label">Remarks</label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="12"><b>1 - Post Admission-24 to 48 Hours</b></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td colspan="7">General Admission Consent has been obtained</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td colspan="7">IP Record (front Page)-all details have furnished and signed by the concerned authority</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td colspan="7">Initial evaluation Of the patient has done completely on the same date of admission</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td colspan="7">Care plan has been documented</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td colspan="7">If the case sheet is written by Duty Medical Officer has been counter signed by the admitting consultant</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="12"><b>2 - Continuing Care Phase</b></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td colspan="7">Temperature chart is duly tracked and filled properly</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td colspan="7">BP, Pulse, Respiration chart duly tracked and filled properly</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td colspan="7">Report from labs/radiology have been duly filled and signed by the authorized signatories</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td colspan="7">Doctor's order form and progress sheets are duly filled, signed, named and dated</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td colspan="7">Progress Notes have been written every day</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td colspan="7">Nurses notes picture a continuity of nursing care at regular intervals</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td colspan="7">Medication chart has been signed by the faculty</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td colspan="7">Medication administration sheet data and doctor's order are correlating</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td colspan="7">Medication chart has been filled legibly</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td colspan="7">Medication orders are written in a uniform location</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td colspan="7">Verbal orders are found to be documented and counter-signed by the consultant within 24 hours</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td colspan="7">The same verbal order has been brought forward to the medication chart</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="12"><b>3 - Surgery and Anaesthesia Related</b></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td colspan="7">Informed consent has been obtained for procedures with complications mentioned</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td colspan="7">Informed consent has been signed by the surgeon</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td colspan="7">Informed Consent has been obtained for anaethesia,with the complication mentioned</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td colspan="7">Pre-operative checklist has been filled</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td colspan="7">Operation record is filled completly</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td colspan="7">Anaethesia consultation form  and pre-anaethesia checkup duly filled</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td colspan="7">Anaethesia record is properl tracked and duly filled</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td colspan="7">Patient has recieved pre operative antobiotic prophylaxis within specified time period</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="12"><b>4 - Post Discharge</b></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td colspan="7">Discharge summary was found in the case sheet</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td colspan="7">All contents is discharge summury are duly filled</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td colspan="7">Condition of the patient during discharge is clearly mentioned in discharge summary</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td colspan="7">All contents are duly filledand blank spaces are stroked off or denoted as not applicable</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td> 
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td colspan="7">All pages have hospital number /patient ID of the patient mentioned on it</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td colspan="7">All signatures are with same name ,date and time</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td colspan="7">Case sheet is found to be arranged in order</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td colspan="7">All pages have been numbered</td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                        <td colspan="1"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+   </html>
+ 
